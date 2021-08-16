@@ -1,0 +1,73 @@
+/* body{
+    background-color: azure;
+} */
+
+.bg-image{
+    background-image: url("../images/BLACKFRAME.jpg");
+    height: 100vh;
+    width: 100%;
+    /* filter: blur(1px);
+    -webkit-filter: blur(1px); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120, auto) repeat(5, 100px);
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.calculator-grid>button{
+    cursor: pointer;
+    font-size: 1.3rem;
+    border: 2px solid orangered;
+    outline: none;
+    background-color: rgb(207, 9, 75);
+    border-radius: 20px;
+    height: 50px;
+    transition: background-color .3s;
+}
+
+.calculator-grid>button:hover{
+    background-color: bisque;
+    color: white;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1/-1;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 15px;
+}
+
+.output .previous-operand {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: gold;
+    font-size: 1.5rem;
+}
